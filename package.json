@@ -1,0 +1,16 @@
+{
+  "name": "setu-college-portal",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Setu — an efficient student portal for college-level students of Bangladesh (MERN)",
+  "scripts": {
+    "install:all": "npm install && npm --prefix server install && npm --prefix client install",
+    "dev": "concurrently -n api,web -c green,yellow \"npm --prefix server run dev\" \"npm --prefix client run dev\"",
+    "seed": "npm --prefix server run seed",
+    "build": "npm --prefix client run build",
+    "start": "npm --prefix server run start"
+  },
+  "devDependencies": {
+    "concurrently": "^8.2.2"
+  }
+}
